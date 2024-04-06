@@ -47,7 +47,7 @@ export const PROVIDER = ({ children }) => {
     try {
       if (!window.ethereum) return notifyError("Install MetaMask");
 
-      const accounts = await window.ethwreum.request({
+      const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
 
@@ -59,7 +59,7 @@ export const PROVIDER = ({ children }) => {
 
       const provider = await web3Provider();
       const network = await provider.getNetwork();
-      setChainID(network.chainID);
+      setChainID(network.chainId);
     } catch (error) {
       const errorMsg = parseErrorMsg(error);
       notifyError(errorMsg);
@@ -91,7 +91,7 @@ export const PROVIDER = ({ children }) => {
 
     let liquidity = await contract.liquidity();
 
-    let { sqrtPrice96, tick } = await contract.slot0();
+    let { sqrtPriceX96, tick } = await contract.slot0();
 
     liquidity = JSBI.BigInt(liquidity.toString());
     sqrtPriceX96 = JSBI.BigInt(sqrtPriceX96.toString());
@@ -123,7 +123,7 @@ export const PROVIDER = ({ children }) => {
   }
 
   //BUILDTRADE
-  function buildTrade(trade) {
+  function buildTrade(trades) {
     return new RouterTrade({
       v2Routes: trades
         .filter((trade) => trade instanceof V2Trade)
@@ -140,7 +140,7 @@ export const PROVIDER = ({ children }) => {
           outputAmount: trade.outputAmount,
         })),
       mixedRoutes: trades
-        .filter((trade) => trade instanceof V3Trade)
+        .filter((trade) => trade instanceof MixedRouteTrade)
         .map((trade) => ({
           mixedRoutes: trade.route,
           inputAmount: trade.inputAmount,
@@ -164,8 +164,12 @@ export const PROVIDER = ({ children }) => {
       const ETHER = ETHER.onChain(1);
 
       //TOKEN CONTRACT
-      const tokenAddress1 = await CONNECTING_CONTRACT("");
-      const tokenAddress2 = await CONNECTING_CONTRACT("");
+      const tokenAddress1 = await CONNECTING_CONTRACT(
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      );
+      const tokenAddress2 = await CONNECTING_CONTRACT(
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      );
 
       //TOKEN DETAILS
       const TOKEN_A = new Token(
@@ -215,7 +219,7 @@ export const PROVIDER = ({ children }) => {
       let tokenA;
       let tokenB;
 
-      ethBalance = await provider.getBalance(RECEPIENT);
+      ethBalance = await provider.getBalance(RECIPIENT);
       tokenA = await tokenAddress1.balance;
       tokenA = await tokenAddress2.balance;
       console.log("-------Before");
@@ -227,7 +231,7 @@ export const PROVIDER = ({ children }) => {
         data: params.calldata,
         to: "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
         value: params.value,
-        from: RECEPIENT,
+        from: RECIPIENT,
       });
 
       console.log("-------CALLING_ME");
@@ -236,7 +240,7 @@ export const PROVIDER = ({ children }) => {
       console.log("-------SUCCESS");
       console.log("STATUS", receipt.status);
 
-      ethBalance = await provider.getBalance(RECEPIENT);
+      ethBalance = await provider.getBalance(RECIPIENT);
       tokenA = await tokenAddress1.balance;
       tokenA = await tokenAddress2.balance;
       console.log("-------AFTER");
