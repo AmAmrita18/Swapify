@@ -41,6 +41,7 @@ export const PROVIDER = ({ children }) => {
 
   //NOTIFICATION
   const notifyError = (msg) => toast.error(msg, { duration: 4000 });
+  const notifySuccess = (msg) => toast.error(msg, { duration: 4000 });
 
   //CONNECT WALLET FUNCTION
   const connect = async () => {
