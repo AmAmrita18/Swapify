@@ -21,8 +21,7 @@ const Scurity = () => {
               <h4 className="lasthead">Secure Exchange</h4>
               <h2 className="title">Security & Compliance</h2>
               <p className="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur libero beatae iste!
+              Swapify ensures that all transactions and user data are protected by the highest industry standards.
               </p>
             </div>
           </div>

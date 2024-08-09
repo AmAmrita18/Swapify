@@ -74,9 +74,8 @@ const Statistics = () => {
               >
                 <h4 className="lasthead">Our stats say more than any words</h4>
                 <h2 className="title">Today's Statistics</h2>
-                <p className="text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-                  tenetur fuga sed
+                <p className="text" id="statspara">
+                Today's Statistics provides real-time data on the latest trading volumes, price changes, and market trends, giving users an instant overview of the current market dynamics.
                 </p>
               </div>
               <div className="row justify-contend-center">

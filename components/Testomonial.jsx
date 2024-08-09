@@ -15,9 +15,7 @@ const Testomonial = () => {
               <h4 className="lasthead">Testimonials</h4>
               <h2 className="title">Don't just take our word for it!</h2>
               <p className="text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi, doloremque saepe Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit.
+              Read what our users have to say about their experience with Swapify in our Testimonials section, showcasing authentic feedback and success stories.
               </p>
             </div>
           </div>
@@ -43,16 +41,15 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Effortless and secure trading—highly recommend!
                       </p>
                       <div className="client-info">
-                        <h4 className="name">Flora Oliver</h4>
+                        <h4 className="name">Jason Lee</h4>
                         <p className="position">CEO & Founder</p>
                       </div>
                     </div>
@@ -71,16 +68,15 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Great platform, user-friendly interface.
                       </p>
                       <div className="client-info">
-                        <h4 className="name">Flora Oliver</h4>
+                        <h4 className="name">David Miller</h4>
                         <p className="position">CEO & Founder</p>
                       </div>
                     </div>
@@ -99,13 +95,12 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Reliable and transparent, top-notch service.
                       </p>
                       <div className="client-info">
                         <h4 className="name">Flora Oliver</h4>
@@ -127,16 +122,15 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Fast transactions with zero issues!.
                       </p>
                       <div className="client-info">
-                        <h4 className="name">Flora Oliver</h4>
+                        <h4 className="name">Michael Carter</h4>
                         <p className="position">CEO & Founder</p>
                       </div>
                     </div>
@@ -155,16 +149,15 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Exceptional security, I trust Swapify.
                       </p>
                       <div className="client-info">
-                        <h4 className="name">Flora Oliver</h4>
+                        <h4 className="name">Emily Davis</h4>
                         <p className="position">CEO & Founder</p>
                       </div>
                     </div>
@@ -183,16 +176,15 @@ const Testomonial = () => {
                     <div className="client-review">
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map((item, index) => (
-                          <i className="fas  "><FaRegStar />
+                          <i key={index} className="fas  "><FaRegStar />
                           </i>
                         ))}
                       </div>
                       <p className="bottom-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit, vel.
+                      Seamless experience, exceeded my expectations!
                       </p>
                       <div className="client-info">
-                        <h4 className="name">Flora Oliver</h4>
+                        <h4 className="name">Alex Thompson</h4>
                         <p className="position">CEO & Founder</p>
                       </div>
                     </div>

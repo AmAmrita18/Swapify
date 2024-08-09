@@ -18,7 +18,7 @@ const Platfrom = () => {
                 <h2 className="title">
                   The Online Cryptocurrency Exchange Platform
                 </h2>
-                <p className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolor ab recusandae voluptatibus eveniet corporis vero, perspiciatis veritatis eaque modi possimus, vel, sint aliquam suscipit. Expedita, tenetur quos? Nobis, fuga?</p>
+                <p className="text">It offers a seamless trading experience, enabling users to buy, sell, and swap digital assets with ease. Powered by decentralized technology, it ensures transparency, security, and full user control over transactions. Whether you're a beginner or an experienced trader, our platform is designed to meet your needs with intuitive features and a user-friendly interface.</p>
               </div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import {
   Statistics,
   Testomonial,
   Token,
+  Loader
 } from "../components/index";
 import { CONTEXT } from "../context/context";
 const index = () => {
@@ -36,7 +37,8 @@ const index = () => {
   //INPUT
   const [slippageAmount, setSlippageAmount] = useState(2);
   const [deadlineMinutes, setDeadlineMinutes] = useState(10);
-  const [inputAmount, setInputAmount] = useState(undefined);
+  const [inputAmount, setInputAmount] = useState("");
+
   //OUTPUT
   const [outputAmount, setOutputAmount] = useState(undefined);
   const [transaction, setTransaction] = useState(undefined);
@@ -52,6 +54,8 @@ const index = () => {
         Load_Token={Load_Token}
         token_1={token_1}
         token_2={token_2}
+        inputAmount={inputAmount}
+        
         setToken_1={setToken_1}
         setToken_2={setToken_2}
         swap={swap}
@@ -74,9 +78,18 @@ const index = () => {
             setToken_2={setToken_2}
             token_1={token_1}
             token_2={token_2}
+
           />
         </div>
       )}
+
+      {
+        loader && (
+          <div className="new_loader">
+            <Loader/>
+          </div>
+        )
+      }
     </div>
   );
 };

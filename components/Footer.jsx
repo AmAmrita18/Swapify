@@ -1,4 +1,9 @@
 import React from "react";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { SlSocialFacebook } from "react-icons/sl";
+import { SlSocialInstagram } from "react-icons/sl";
+import { SlSocialTwitter } from "react-icons/sl";
+import { SlSocialGoogle } from "react-icons/sl";
 
 const Footer = () => {
   return (
@@ -15,7 +20,7 @@ const Footer = () => {
           >
             <div className="top-footer">
               <div className="logo">
-                <img src="assets/img/logo.png" alt="" />
+                <img id="logo" src="assets/img/logo3.png" alt="" />
               </div>
               <a href="/" className="button-1">
                 Get In Touch
@@ -34,7 +39,7 @@ const Footer = () => {
               <ul className="footer-link">
                 {["About Us", "Contact Us", "Blog", "Affiliate"].map(
                   (item, index) => (
-                    <li>
+                    <li key={index}>
                       <a href="#">{item}</a>
                     </li>
                   )
@@ -52,7 +57,7 @@ const Footer = () => {
               <ul className="footer-link">
                 {["FAQ", "Contact Time", "How it works", "Details"].map(
                   (item, index) => (
-                    <li>
+                    <li key={index}>
                       <a href="#">{item}</a>
                     </li>
                   )
@@ -74,7 +79,7 @@ const Footer = () => {
                   "Refunds Policy",
                   "Money Type",
                 ].map((item, index) => (
-                  <li>
+                  <li key={index}>
                     <a href="#">{item}</a>
                   </li>
                 ))}
@@ -99,19 +104,24 @@ const Footer = () => {
               </form>
               <div className="social-style">
                 <a href="#">
-                  <i className="fab fa-facebook-f"></i>
+                  <i ><SlSocialLinkedin />
+                  </i>
                 </a>
                 <a href="#">
-                  <i className="fab fa-twitter"></i>
+                  <i ><SlSocialFacebook />
+                  </i>
                 </a>
                 <a href="#">
-                  <i className="fab fa-pinterest-p"></i>
+                  <i><SlSocialInstagram />
+                  </i>
                 </a>
                 <a href="#">
-                  <i className="fab fa-google-plus-g"></i>
+                  <i><SlSocialTwitter />
+                  </i>
                 </a>
                 <a href="#">
-                  <i className="fab fa-instagram"></i>
+                  <i><SlSocialGoogle />
+                  </i>
                 </a>
               </div>
             </div>

@@ -10,6 +10,7 @@ const Hero = ({
   token_2,
   setToken_1,
   setToken_2,
+  inputAmount,
   swap,
 }) => {
   //RESET BUTTON
@@ -39,8 +40,8 @@ const Hero = ({
               >
                 <h3 className="subtaitle">Fast and Convinient</h3>
                 <h1 className="head">Cryptocurrency Exchange</h1>
-                <p className="text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                <p className="lasthead">
+                  Swapify is a decentralized cryptocurrency exchange offering seamless and secure trading without intermediaries. Empowering users with full control over their digital assets through a trustless, transparent platform.
                 </p>
               </div>
             </div>
@@ -101,7 +102,7 @@ const Hero = ({
                         type="text"
                         placeholder={token_2?.symbol || "Select"}
                         className="form-control"
-                        onClick={() => setOpenToken(true)}
+                        onChange={(e) => setInputAmount(e.target.value)}
                       />
                     </div>
                   </div>
@@ -114,7 +115,7 @@ const Hero = ({
                     ""
                   )}
                 </div>
-                <a href="" onClick={() => swap()} className="button button-1">
+                <a onClick={() => swap(token_1, token_2, inputAmount)} className="button button-1">
                   Exchange
                 </a>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { shortenAddress } from "../utils";
+import { shortenAddress } from "../utils/index";
 
 const Header = ({ address, connect }) => {
   const menu = [
@@ -15,14 +15,14 @@ const Header = ({ address, connect }) => {
       name: "How It Works",
       link: "#howworks",
     },
-    {
-      name: "Q&A",
-      link: "#question",
-    },
-    {
-      name: "Blog",
-      link: "#blog",
-    },
+    // {
+    //   name: "Q&A",
+    //   link: "#question",
+    // },
+    // {
+    //   name: "Blog",
+    //   link: "#blog",
+    // },
     {
       name: "Contact",
       link: "#contact",
@@ -33,7 +33,7 @@ const Header = ({ address, connect }) => {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <a href="/" className="navbar-brand">
-            <img src="assets/img/logo.png" alt="swap" />
+            <img id="logo" src="assets/img/logo3.png" alt="swap" />
           </a>
           <button
             className="navbar-toggler"

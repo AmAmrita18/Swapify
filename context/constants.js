@@ -19,7 +19,7 @@ export const web3Provider = async () => {
     const provider = new ethers.providers.Web3Provider(connection);
 
     // const network = await provider.getNetwork();
-
+console.log({provider})
     return provider;
   } catch (error) {
     console.log(error);
@@ -38,8 +38,8 @@ export const CONNECTING_CONTRACT = async (ADDRESS) => {
     const contract = fetchTokenContract(signer, ADDRESS);
 
     //USER ADDRESS
-    // const userAddress = await signer.getAddress();
-    const balance = await contract.balanceOf(TEST_ACCOUNT);
+    const userAddress = await signer.getAddress();
+    const balance = await contract.balanceOf(userAddress);
 
     const name = await contract.name();
     const symbol = await contract.symbol();

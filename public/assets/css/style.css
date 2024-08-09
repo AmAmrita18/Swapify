@@ -471,7 +471,10 @@ p.text {
     padding: 0px 0px;
     padding: 0rem 0rem;
 }
-
+#logo{
+    width: 200px;
+    height: 60px;
+}
 .mein-menu .navbar #navbarNavDropdown {
     margin: 0;
 }
@@ -998,7 +1001,10 @@ p.text {
 }
 
 /* statistic Start */
-
+#statspara{
+    width: 50%;
+    margin: auto;
+}
 .statistic {
     position: relative;
     background: #fff;
