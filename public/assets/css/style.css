@@ -622,6 +622,7 @@ p.text {
     background-repeat: no-repeat;
     padding: 223px 0 225px;
     position: relative;
+    z-index: 8888;
 }
 
 .banner .illustration .one {
