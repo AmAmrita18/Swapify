@@ -687,6 +687,7 @@ p.text {
     background-repeat: no-repeat;
     background-size: 100% 144px, cover;
     background-position: left 0px top 0px;
+    z-index: 99999;
 }
 
 .banner .hero-area .exchange h5.ex-head {
